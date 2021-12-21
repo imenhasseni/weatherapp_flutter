@@ -43,12 +43,12 @@ class _CityScreenState extends State<CityScreen> {
                     fontFamily: 'Nunito',
                   ),
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: Icon(Icons.search, color: Colors.blueGrey,),
                     filled: true,
                     fillColor: Colors.white10,
                     labelText: 'City Name',
                     labelStyle: TextStyle(
-                      color: Colors.white,
+                      color: Colors.blueGrey,
                       fontSize: 20,
                       fontFamily: 'Nunito',
                     ),
@@ -69,13 +69,13 @@ class _CityScreenState extends State<CityScreen> {
                   child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    color: Colors.white12,
+                    color: Colors.blueGrey,
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: Text(
                         'Get Weather',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.amber,
                           fontSize: 20,
                           fontFamily: 'Nunito',
                         ),

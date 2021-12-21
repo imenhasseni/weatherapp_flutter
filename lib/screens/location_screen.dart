@@ -95,7 +95,8 @@ class _LocationScreenState extends State<LocationScreen> {
                         children: [
                           Icon(
                             FontAwesomeIcons.mapMarkerAlt,
-                            color: Colors.white,
+                            color: Colors.blueGrey,
+                            size: 22,
                           ),
                           SizedBox(
                             width: 10,
@@ -104,7 +105,7 @@ class _LocationScreenState extends State<LocationScreen> {
                             cityName,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 25,
                               fontFamily: 'Nunito',
                             ),
                           ),
@@ -124,7 +125,8 @@ class _LocationScreenState extends State<LocationScreen> {
                       },
                       child: Icon(
                         Icons.subject,
-                        color: Colors.white,
+                        color: Colors.blueGrey,
+                        size: 30,
                       ),
                     ),
                   ],
@@ -151,12 +153,12 @@ class _LocationScreenState extends State<LocationScreen> {
                     elevation: 10,
                     margin: EdgeInsets.fromLTRB(10, 20, 10, 30),
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(30),
                       width: double.maxFinite,
                       height: double.maxFinite,
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        child: Column (
+                          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               DateFormat.yMMMMEEEEd().format(DateTime.now()),
@@ -166,67 +168,53 @@ class _LocationScreenState extends State<LocationScreen> {
                                 fontFamily: 'Nunito',
                               ),
                             ),
-                            Text(
-                              '${temp.toString()}°c',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 100,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cabin',
+                           Text(
+                                '${temp.toString()}°c',
+                                style: TextStyle(
+                                  color: Colors.amber,
+                                  fontSize: 80,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cabin',
+                                ),
                               ),
-                            ),
+
                             Text(
                               weatherCondition,
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFF2B3F4D),
                                 fontSize: 40,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Nunito',
                               ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  FontAwesomeIcons.wind,
-                                  color: Colors.white70,
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Text(
-                                  'Wind    ||    $wind',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontFamily: 'Nunito',
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    FontAwesomeIcons.wind,
+                                    color: Colors.white70,
+                                    size: 20,
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Text(
+                                    'Wind   ||   $wind',
+                                    style: TextStyle(
+                                      color: Colors.white70,
+                                      fontSize: 20,
+                                      fontFamily: 'Nunito',
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  FontAwesomeIcons.handHoldingWater,
-                                  color: Colors.white70,
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Text(
-                                  'Wind    ||    $humidity',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontFamily: 'Nunito',
-                                  ),
-                                ),
-                              ],
-                            )
+
                           ],
                         ),
-                      ),
                     ),
                   ),
                 ),
